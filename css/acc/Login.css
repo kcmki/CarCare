@@ -1,0 +1,90 @@
+#login{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    
+}
+    .invisible{
+        transform: translate(50vw,-50vh) scale(0);
+        opacity:0;
+        transition: 1s;
+    }
+        #login .loginform{
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: white;
+            border-radius: 15px;
+            width: 400px;
+            height: 400px;
+        }
+            #login .loginform form{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+                #login .loginform form input{
+                    text-align: center;
+                    display: block;
+                    margin: 10px;
+                    font-size: 18px;
+                    outline: none;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: rgb(204, 204, 204);
+                    transition: 0.5s;
+                    height: 24px;
+                    width: 300px;
+                }
+                #login .loginform form input[type="button"]{
+                    width: 150px;
+                    height: 40px;
+                    color: rgb(207, 204, 204);
+                    background:linear-gradient(90deg,rgb(133,0,0), rgba(48,50,111));
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+                #login .loginform form input[type="button"]:hover{
+                    transform: scale(1.05);
+                    box-shadow: 0px 5px 7px -5px black;
+                    transition: 0.5s;
+                }
+                #login .loginform form .click{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: rgb(22, 22, 22);
+                }
+                #login .loginform form .click a{
+                    text-decoration: none;
+                    color: rgb(22, 22, 22);
+                    font-weight: bold;
+                    font-size: 18px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+                #login .loginform form .click a:hover{
+                    text-decoration: underline;
+                    text-decoration-thickness: 3px;
+                    transition: 0.5s;
+                    
+                }
+
+            #login .loginform .title{
+                color: #20242c;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 24px;
+                font-weight: bold;
+                padding-bottom: 40px;
+                cursor: default;
+            }

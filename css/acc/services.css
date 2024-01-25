@@ -1,0 +1,66 @@
+div#nosservice{
+
+padding-top: 200px;
+padding-bottom: 150px;
+ display: grid;
+ grid-template-areas: 
+ "box1 sep image1"
+ "image2 sep box2"
+ "box3 sep image3"
+ "box4 sep image4";
+ 
+}
+div#nosservice .separator{
+    grid-area: sep;
+    height: 700px;
+    width: 100px;
+    background-color:rgba(133,0,0,1);
+    border-radius: 8px;
+}
+    div#nosservice div.pic{
+        position: relative;
+        height: 130px;
+        width: 100%;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+        z-index: 1;
+    }
+    div#nosservice div.pic img{
+        height: 130px;
+        width: auto;
+        border-radius: 1em;
+        
+    }
+    div#nosservice div.blocktext{
+        margin: 20px 0px 20px 0px;
+        position: relative;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 350px;
+        overflow: hidden;
+        height: 110px;
+        padding: 10px;
+        
+    }
+    div#nosservice div.blocktext div.title{
+        padding: 10px 0px 0px 40px;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(207, 204, 204);
+    }
+    div#nosservice div.blocktext div.desc{
+        font-size: 16px;
+        padding: 10px;
+        color: rgb(185, 183, 183);
+        overflow: hidden;
+        height: 50px;
+    }
+    div#nosservice .left{
+        left: 70px;
+        border-radius: 1em 0px 0px 1em;
+        background-image: linear-gradient(to right,rgba(48,50,111,1) 85%,rgba(48,50,111,0));
+    }
+    div#nosservice .right{
+        right: 70px;
+        border-radius: 0px 1em 1em 0px;
+        background-image: linear-gradient(to left,rgba(48,50,111,1) 85%,rgba(48,50,111,0));
+    }

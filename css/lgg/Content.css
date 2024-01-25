@@ -1,0 +1,367 @@
+:root{
+    --blue :rgba(48,50,111) ;
+    --red : rgb(133,0,0);
+    --light-gray:rgb(61, 61, 61);
+    --gray:rgb(36, 36, 36);
+    --darker-gray:rgb(27,27,27);
+    --dark-gray:rgb(42,42,42);
+    --text-color:rgb(35,35,35);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bold{
+    font-weight: bold;
+    padding: 3px;
+}
+.gradientborder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 4px;
+    margin: calc(3rem - 8px);
+    
+    background-image: linear-gradient(-90deg,var(--red), var(--blue));
+}
+.rem50{
+    width: 50rem;
+}
+
+div#Content{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+    div#Content .toptextlog{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100vw - 100px);
+        height: 150px;
+    }
+        div#Content .toptextlog .Bigtitletext{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            cursor: default;
+            color:rgb(36, 36, 36);
+            text-shadow: 0px 1px 1px rgb(149, 149, 149);
+        }   
+    div#Content .Mainc{
+        height: 100%;       
+        display: flex;
+        flex-direction: column;
+
+    }   
+        div#Content .Mainc .myprofile{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#Content .Mainc .mycars{
+            grid-area: cars;
+        }
+        div#Content .Mainc .myprofile .container{
+
+            width: calc(100% - 100px);
+            padding: 50px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            background-color: white;
+            border-radius: 13px;
+        }
+            div#Content .Mainc .myprofile .container .info{
+                width: 80%;
+            }
+            div#Content .Mainc .myprofile .container .info .text{
+                position: relative;
+                transform: scale(0);
+                width: 100%;
+                opacity: 0;
+
+                transition: 0.5s;
+            }
+                div#Content .Mainc .myprofile .container .info .text .center{
+                    width: 100%;
+                }
+                div#Content .Mainc .myprofile .container .info .text .center .update{
+                    color: rgb(207, 204, 204);
+                    width: 120px;
+                    height: 40px;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    background: linear-gradient(90deg,var(--blue),var(--red));
+                    margin: 15px;
+                    cursor: pointer;
+
+                    transition: 0.5s;
+                }
+                    div#Content .Mainc .myprofile .container .info .text .center .update:hover{
+                        transform: scale(1.1);
+                        box-shadow: 0px 7px 5px -5px #20242c;
+                        transition: 0.5s;
+                    }
+
+            div#Content .Mainc .myprofile .container .info .updateform{
+                transform: scale(0);
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: calc((50rem - 100px) * 0.8);
+                opacity: 0;
+
+                transition: 0.5s;
+            }
+                div#Content .Mainc .myprofile .container .info .updateform input,select{
+                    margin: 3px;
+                    height: 19px;
+                    background-color: rgb(195, 195, 195);
+                    border: none;
+                    border-radius: 15px;
+                    width: 40%;
+                    text-align: center;
+                }
+                div#Content .Mainc .myprofile .container .info .updateform .control{
+                    display: flex;
+                    justify-content: space-around;
+                }
+                div#Content .Mainc .myprofile .container .info .updateform .control .CancelUpdate,div#Content .Mainc .myprofile .container .info .updateform .control input{
+                    font-weight: bold;
+                    font-size: 18px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                    color: rgb(207, 204, 204);
+                    outline: none;
+                    border: none;
+                    border-radius: 15px;
+
+                    margin: 15px;
+
+                    cursor: pointer;
+                    width: 120px;
+                    height: 40px;
+                    background: linear-gradient(-90deg,var(--blue),var(--red));
+
+                    transition: 0.5s;
+                }
+                div#Content .Mainc .myprofile .container .info .updateform .control input{
+                    background: linear-gradient(90deg,var(--blue),var(--red));
+                }
+                    div#Content .Mainc .myprofile .container .info .updateform .control .CancelUpdate:hover,div#Content .Mainc .myprofile .container .info .updateform .control input:hover{
+                        transform: scale(1.1);
+                        box-shadow: 0px 7px 5px -5px #20242c;
+                        transition: 0.5s;
+                    }
+                    
+            div#Content .Mainc .myprofile .container .info .show{
+                transform: scale(1);
+                opacity: 1;
+            }
+              
+                div#Content .Mainc .myprofile .container .title{
+                font-size: 30px;
+                margin-left: 20px;
+                margin-bottom: 10px;
+            }
+            div#Content .Mainc .myprofile .container .profpic{
+                margin-top: 50px;
+                margin-bottom: 50px;
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                float: right;
+            }
+                div#Content .Mainc .myprofile .container .profpic img{
+                    position: relative;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+                    div#Content .Mainc .myprofile .container .profpic .uppic{
+                        position: absolute;
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        background-color: rgba(0, 0, 0, 0.335);
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        z-index: 2;
+                        transition: 0.3s;
+                        opacity: 0;
+                    }
+                        div#Content .Mainc .myprofile .container .profpic .uppic img{
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 0px;
+                        }
+                        div#Content .Mainc .myprofile .container .profpic:hover .uppic {
+                            opacity: 1;
+                            transition: 0.3s;
+                        }
+        div#Content .Mainc .flex{
+            display: flex;
+            flex-direction: row;
+            
+        }
+            div#Content .Mainc .flex .separator{
+                width: 6px;
+                border-radius: 3px;
+                background-color: var(--gray);
+                height: 100%;
+                margin-left: calc(3% - 6px);
+                margin-right: calc(3% - 6px);
+            }
+            div#Content .Mainc .flex .title{
+                font-size: 25px;
+                font-weight: bold;
+                margin-left: 15px;
+                margin-bottom: 15px;
+                cursor: default;
+                width: 90%;
+                color:var(--darker-gray);
+                text-shadow: 0px 1px 1px rgb(149, 149, 149);
+            }
+            div#Content .Mainc .flex div.Actualité{
+                width: 30%;
+                height: 100%;
+            }
+                div#Content .Mainc .flex div.Actualité .Actu{
+                    width: 90%;
+                    display: grid;
+                    grid-template-areas: "title img"
+                                         "loc img"
+                                         "desc img";
+                    grid-template-columns: 60% 40%;
+                    border: 3px solid var(--blue);
+                    border-radius: 15px;
+                    transition: 0.5s;
+                }
+                    div#Content .Mainc .flex div.Actualité .Actu:hover{
+                        border-color: var(--red);
+                        transition: 0.5s;
+                    }
+                    div#Content .Mainc .flex div.Actualité .Actu .title{
+                        
+                        grid-area: title;
+                        font-size: 16px;
+                        font-weight: bold;
+                        cursor: default;
+                        color:var(--darker-gray);
+                        margin: 5px;
+                        margin-left: 15px;
+                        text-shadow: 0px 1px 1px rgb(149, 149, 149);
+                    }
+                    div#Content .Mainc .flex div.Actualité .Actu .loc{
+                        grid-area: loc;
+                        font-size: 15px;
+                        font-weight: bold;
+                        cursor: default;
+                        color:var(--dark-gray);
+                        margin-left: 25px;
+                        margin-bottom: 8px;
+                        text-shadow: 0px 1px 1px rgb(149, 149, 149);
+                    }
+                    div#Content .Mainc .flex div.Actualité .Actu .desc{
+                        grid-area: desc;
+                        
+                        display: flex;
+                        overflow: hidden;
+                        height: 70px;
+                        margin-left: 10px;
+                        margin-bottom: 10px;
+                        cursor: default;
+                        font-size: 14px;
+                        color:var(--text-color);
+                        
+                        text-shadow: 0px 1px 1px rgb(149, 149, 149);
+                    }
+                    div#Content .Mainc .flex div.Actualité .Actu .img{
+                        grid-area: img;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+
+                    }
+                    div#Content .Mainc .flex div.Actualité .Actu .img img{
+                        width: 70%;
+                        margin: 10px;
+                        height: auto;
+                    }
+            div#Content .Mainc .flex div.historiqueAchat{
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+                div#Content .Mainc .flex div.historiqueAchat .Achat{
+                    width: 90%;
+                    display: grid;
+                    grid-template-columns: 45% 55%;
+                    border: 3px solid var(--blue);
+                    border-radius:  0px 15px 15px 0px;
+                    transition: 0.5s;
+                }
+                    div#Content .Mainc .flex div.historiqueAchat .Achat .info{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        color:var(--gray);
+                    }
+                        div#Content .Mainc .flex div.historiqueAchat .Achat .info .nom{
+                            font-size: 17px;
+                            font-weight: bold;
+                        }
+                        div#Content .Mainc .flex div.historiqueAchat .Achat .info .ntransaction{
+                            font-size: 10px;
+                        }
+                        div#Content .Mainc .flex div.historiqueAchat .Achat .info .date{
+                            font-size: 13px;
+                        }
+                        div#Content .Mainc .flex div.historiqueAchat .Achat .info .emp{
+                            font-size: 13px;
+                            font-weight: bold;
+                        }
+                        div#Content .Mainc .flex div.historiqueAchat .Achat .info .prix{
+                            font-size: 15px;
+                            font-weight: bold;
+                            color: var(--red);
+                        }
+                    
+                    div#Content .Mainc .flex div.historiqueAchat .Achat .img{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: 10px;
+                    }
+                        div#Content .Mainc .flex div.historiqueAchat .Achat .img img{
+                            height: 6em;
+                            border-radius: 20px;
+                            border: 3px solid var(--blue);
+                        }
+                        div#Content .Mainc .flex div.historiqueAchat .Achat .img img:hover{
+                            border-color: var(--red);
+                        }
+            div#Content .Mainc .flex div.historiqueGarage{
+                width: 30%;
+
+            }

@@ -1,0 +1,131 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+
+}
+nav#leftbar{
+    width: 100px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 150px min-content auto;
+}   
+    #leftbar .blocks .block{
+        display: flex;
+        height: 100px;
+        width: 100px;
+        flex-direction: column;
+    }
+        #leftbar .blocks .block .topbar,#leftbar .blocks .block .botbar{
+            width: 100px;
+            height: 20px;
+            background-color: rgba(48,50,111,1);
+            transition: 0.2s;
+        }
+        #leftbar .blocks .block .logo{
+            width: 100px;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+        }
+            #leftbar .blocks .block .logo .left{
+                width: 10px;
+                height: 60px;
+                background-color: rgba(48,50,111,1);
+            }
+            #leftbar .blocks .block .logo .right{
+                width: calc(100% - 10px);
+                height: 60px;
+                background-color: rgba(48,50,111,1);
+                transition: 0.5s;
+            }
+                #leftbar .blocks .block .logo .right .cont{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px 0px 0px 10px;
+                    transition: 0.4s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                #leftbar .blocks .block:hover .logo .right .cont{
+                    background-color: white;
+
+                    transition: 0.2s;
+                }
+                    #leftbar .blocks .block .logo .right .cont img{
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                    }
+        #leftbar .blocks .block:hover .botbar{
+            border-radius: 0px 10px 0px 0px;
+            transition: 0.5s;
+        }
+        #leftbar .blocks .block:hover .topbar{
+            border-radius: 0px 0px 10px 0px;
+            transition: 0.5s;
+        }
+                #leftbar .blocks .selected .logo .right .cont{
+                    background-color: white;
+                }
+                #leftbar .blocks .selected .botbar{
+                    border-radius: 0px 10px 0px 0px;
+                }
+                #leftbar .blocks .selected .topbar{
+                    border-radius: 0px 0px 10px 0px;
+                }
+    #leftbar .longblock{
+        width: 100px;
+        height: 100%;
+        background-color: rgba(48,50,111,1);
+    }
+
+    #leftbar .topsidebar{
+        display: grid;
+        grid-template-columns: 10px 90px;
+        grid-template-rows: auto 20px;
+        grid-template-areas: 'leftbar cont'
+                            ' leftbar botblock';
+        height: 100%;
+        width: 100px;
+    }
+
+        #leftbar .topsidebar .leftbar{
+            grid-area: leftbar;
+            background-color: rgba(48,50,111,1);
+        }
+        #leftbar .topsidebar .botblock{
+            grid-area: botblock;
+        }
+            #leftbar .topsidebar .botblock .bluetop{
+                background-color: rgba(48,50,111,1);
+                width: 100%;
+                height: 10px;
+            }
+                #leftbar .topsidebar .botblock .bluetop .whitetop{
+                    width: 100%;
+                    height: 10px;
+                    border-radius: 0px 0px 0px 10px;
+                    background-color: white;
+                }
+
+            #leftbar .topsidebar .botblock .bluebot{
+                background-color: rgba(48,50,111,1);
+                width: 100%;
+                height: 10px;
+                border-radius: 0px 10px 0px 0px;
+            }
+        #leftbar .topsidebar .cont{
+            grid-area: cont;
+            width: 180px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #leftbar .topsidebar .cont img{
+            width: 120px;
+            height: auto;
+        }

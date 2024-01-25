@@ -1,0 +1,93 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+
+   }
+   img.bg{
+       width: 100vw;
+       height: 100vh;
+       position: fixed;
+       z-index: -1;
+   }
+   div.top{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+       height: 90vh;
+       overflow: hidden;
+       z-index: 1;
+   }   
+       div#topbar{
+           display: grid;
+           grid-template-columns: 150px auto 150px;
+           height: 7vh;
+           position: fixed;
+           background-color: white;
+           width: 100%;
+           transform: translate3d(0,-8vh,0);
+           transition: 1s;
+           z-index: 2;
+       }
+       div#topbar .logo{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       div#topbar .logo img{
+            width: 50px;
+            height: auto;
+            transition: 1s;
+       }
+       div#topbar .text{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           font-size: 25px;
+           font-weight: bold;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+           color: #20242c;
+           cursor: default;
+       }
+       div#topbar #logaccount{
+           padding-right: 30px;
+           display: flex;
+           justify-content: right;
+           align-items: center;
+       }
+       div#topbar #logaccount img{
+        cursor: pointer;
+       }
+       
+       div#topbar #logaccount .bean{
+           z-index: -1;
+           position: absolute;
+           opacity: 0;
+           transition: 1s;   
+       }
+       div#topbar #logaccount .beanBG{
+            z-index: 100;
+            opacity: 1;
+            transform: translate(-50vw,50vh) scale(50);
+            transition: 1s;        
+       }
+       div.log{
+           width: 250px;
+           height: 350px;
+       }
+       div.log   img.logo{
+               display: block;
+               z-index: 2;
+               width: 250px;
+               height: auto;
+           }
+       div.log   div.logtext{
+               text-align: center;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               font-size: 35px;
+               font-weight: bold;
+               color: #20242c;
+               
+           }

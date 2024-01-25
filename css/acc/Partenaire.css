@@ -1,0 +1,50 @@
+#partners{
+    position: relative;
+}
+div.auto-caroussel{
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.75s;
+    background-image: linear-gradient(180deg,rgb(133,0,0) 10%, rgba(48,50,111));
+    position: relative;
+}
+.partner{
+    height: 600px;
+
+    margin: 1.5vw;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .partner img{
+        display: block;
+        height: 180px;
+        width: auto;
+        background-color: azure;
+        border-radius: 1em;
+
+    }
+div.whitetopbg{
+    width: 100%;
+    height: 165px;
+    background-color: white;
+    clip-path: url(#case-wave-top-clip);
+
+    z-index: 1;
+    position: relative;
+    top: 165px;
+    right: 30vw;
+}
+div.whitebottombg{
+    width: 100%;
+    height: 155px;
+    background-color: white;
+    clip-path: url(#case-wave-bottom-clip);
+
+    z-index: 1;
+    position: relative;
+    bottom: 155px;
+    right: 30vw;
+}
